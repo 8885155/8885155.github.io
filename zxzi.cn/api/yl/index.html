@@ -1,0 +1,60 @@
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no">
+  <link href="https://cdn.staticfile.org/layui/2.6.8/css/layui.css" rel="stylesheet">
+  <title>QQ音乐-音响力</title>
+  <style>#t-warp{margin:0 auto;width:96%;position:relative}@media  screen and (min-width:500px){#t-warp{width:500px!important}}input[type=text],select{width:100%;padding:12px 20px;margin:8px 0;display:inline-block;border:1px solid #ccc;border-radius:4px;box-sizing:border-box}.inputff{background-color:#091409}.inputff:hover{background-color:#091409}.wog{border-radius:5px;background-color:#f2f2f2;padding:20px}</style>
+  <style>.modal-header{display:flex;flex-shrink:0;align-items:center;justify-content:space-between;padding:1rem 1rem;border-bottom:1px solid #dee2e6;border-top-left-radius:calc(0.3rem - 1px);border-top-right-radius:calc(0.3rem - 1px)}.modal-body{position:relative;flex:1 1 auto;padding:1rem}.modal-footer{display:flex;flex-wrap:wrap;flex-shrink:0;align-items:center;justify-content:flex-end;padding:0.75rem;border-top:1px solid #dee2e6;border-bottom-right-radius:calc(0.3rem - 1px);border-bottom-left-radius:calc(0.3rem - 1px)}.foec{background-color:#000000;color:white;padding:12px 20px;border:none;border-radius:4px;cursor:pointer;float:right}</style>
+</head>
+<body>
+  <br>
+  <div id="t-warp" class="t-warp">
+    <blockquote class="layui-elem-quote layui-quote-nm">
+				❶.QQ音乐 音响力满级不是梦
+				<br>
+				❷.注意音响力日上限300min
+				<br>
+				❸.本页仅供测试，自己去看效果，谢谢支持。
+    </blockquote>
+    <div class="wog">
+      <label for="fname">账号</label>
+      <input type="text" id="fname" name="firstname">
+
+      <button type="button" class="layui-btn layui-btn-fluid inputff" value="A1" onclick="dlmm()" style="line-height: 50px;height: 50px;">提交</button>
+
+    </div>
+    <div id="data11"></div>
+    <script src="https://cdn.staticfile.org/jquery/3.5.0/jquery.min.js"></script>
+    <script src="https://cdn.staticfile.org/layer/3.5.1/mobile/layer.min.js"></script>
+    <script src="https://cdn.staticfile.org/layui/2.6.8/layui.min.js"></script>
+    <script src="https://cdn.bootcdn.net/ajax/libs/blueimp-md5/2.19.0/js/md5.js"></script>
+    <script>
+      function dlmm() {
+        var qq = $('#fname').val();
+        if(qq === '') {
+        layer.alert("请输入完整账号");
+        return;
+        }
+        $.get("https://zxzi.cn/api/yl/yl.php?qq="+qq, function(data){
+        layer.alert(data);
+        });
+      };
+    </script>
+  </div>
+
+                    </div>
+                    <div style="display: flex;justify-content: center;margin-top: 15px;">
+                        <a href="https://share.weiyun.com/oIt3d4mU" style="border-bottom: none;margin-right: 5px;">
+                            <img
+                                src="https://img.shields.io/badge/%E5%BE%AE%E4%BF%A1%E7%99%BB%E5%BD%95%E7%9A%84%E8%B4%A6%E5%8F%B7-%E4%BD%BF%E7%94%A8%E6%96%B9%E6%B3%95%E7%82%B9%E5%87%BB%E6%9F%A5%E7%9C%8B-green" />
+                        </a>
+                        </div>
+                        </div>
+           <p>☞增加300分钟音响力经验，请在QQ音乐app里查看效果</p>
+
+<script charset="UTF-8" id="LA_COLLECT" src="//sdk.51.la/js-sdk-pro.min.js"></script>
+<script>LA.init({id:"JnttpH76eHl4wB82",ck:"JnttpH76eHl4wB82"})</script>
+</body>
+</html>
