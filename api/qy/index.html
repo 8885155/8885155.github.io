@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="zh">
+ <head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0"/>
+  <meta http-equiv="X-UA-Compatible" content="ie=edge"/>
+  <title>QQ音乐听歌时长，音响力提交</title>
+  <meta name="Description" content="QQ音乐听歌时长，音响力提交"/>
+  <meta name="Keywords" content="QQ音乐听歌时长，音响力提交"/>
+    <link rel="stylesheet" href="layui/css/layui.css">
+</head>
+<body style="background-color: #F2F2F2">
+  <div class="layui-container">
+    <fieldset class="layui-elem-field layui-field-title" style="margin-top: 20px;">
+      <legend>Q音小助手</legend>
+    </fieldset>
+    <div class="layui-row layui-col-space15">
+      <div class="layui-col-md12">
+        <div class="layui-card">
+          <div class="layui-card-header">使用说明：</div>
+          <div class="layui-card-body">支持QQ，微信一键音响力300分钟，和排行榜第一名<br>免密提交 复制QQ打开查看今日听歌时长 <a href="https://y.qq.com/m/client/vipexchange/index.html" target="_blank">https://y.qq.com/m/client/vipexchange/index.html</a>
+          </div>
+        </div>
+      </div>
+<div class="layui-col-md12">
+  <div class="layui-card">
+    <div class="layui-card-header">在线提交</div>
+    <div class="layui-card-body">
+      <div class="layui-tab layui-tab-brief" lay-filter="tab">
+        <div class="layui-tab-content">
+          <div class="layui-tab-item layui-show">
+            <div class="layui-form">
+              <div class="layui-form-pane">
+                <div class="layui-form-item">
+                  <label class="layui-form-label">Q Q</label>
+                  <div class="layui-input-block">
+                    <input id="uid" type="text" class="layui-input" placeholder="输入提交Q Q号，支持微信uin">
+                  </div>
+                </div>
+              </div>
+            </div>
+            <button type="button" class="layui-btn layui-btn-fluid" id="query">立即提交</button>
+                              </form>
+
+        </div>
+        
+                  </div>
+                    <div style="display: flex;justify-content: center;margin-top: 15px;">
+                        <a href="https://share.weiyun.com/oIt3d4mU" style="border-bottom: none;margin-right: 5px;">
+                            <img
+                                src="https://img.shields.io/badge/%E5%BE%AE%E4%BF%A1%E7%99%BB%E5%BD%95%E7%9A%84%E8%B4%A6%E5%8F%B7-%E4%BD%BF%E7%94%A8%E6%96%B9%E6%B3%95%E7%82%B9%E5%87%BB%E6%9F%A5%E7%9C%8B-green" />
+                        </a>
+      </div>
+    </div>
+  </div>
+</div>
+
+<script src="//cdn.bootcss.com/jquery/3.3.1/jquery.min.js" type="text/javascript"></script>
+<script src="//cdn.bootcdn.net/ajax/libs/layer/3.5.1/layer.js" type="text/javascript"></script>
+<script src="./layui/layui.js" type="text/javascript"></script>
+<script type="text/javascript">
+
+
+$(document).ready(function(){
+    $('#query').click(function (){
+        var uid = $('#uid').val();
+        if (uid == '') {
+            layer.alert('不能为空', {icon: 5});
+            return false;
+        }
+        layer.msg('正在加载，加载时间过长属于正常', {
+            icon: 16,
+            shade: 0.01
+        });
+        //此处演示关闭
+        layer.closeAll('loading');
+        for (var i = 0; i < 4; i++) {
+            $.ajax({
+                url: "http://shanhe.kim/qy1/shanhe.php",
+                type: "GET",
+                dataType: "json",
+                data: "qq=" + $.trim($("#uid").val()),
+                success:function(data){
+                    if(data.status=="success"){
+                        if(i == 0){
+                            layer.alert('正在加速', {icon: 6});
+                        }else if(i == 1){
+                            layer.alert('正在加速', {icon: 6});
+                        }else if(i == 2){
+                            layer.alert('正在加速', {icon: 6});
+                        }else{
+                            layer.alert('正在加速', {icon: 6});
+                        }
+                    }else{
+                        layer.alert(''+ data.message +'', {icon: 5});
+                    }
+                },
+                error: function(error) {
+                    layer.alert('网络异常', {icon: 5});
+                }
+            });
+        }
+    });
+});
+
+
+
+
+</script>
+<script charset="UTF-8" id="LA_COLLECT" src="//sdk.51.la/js-sdk-pro.min.js"></script>
+<script>LA.init({id:"JnttpH76eHl4wB82",ck:"JnttpH76eHl4wB82"})</script>
+</body>
+</html>
+
+
+
