@@ -144,7 +144,7 @@ body::-webkit-scrollbar-thumb {
     margin-bottom: 4vw;
     padding: 40px 0;
     color: #fff;
-    background-image: url(https://www.xccx.cc/api/tp/index.php);
+    /* background-image: url(https://www.xccx.cc/api/tp/index.php); */
     background-size: cover;
     background-position: bottom;
     background-repeat: no-repeat
