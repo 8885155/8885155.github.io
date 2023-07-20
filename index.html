@@ -217,6 +217,66 @@
                        <!--     <p id="hitokoto">:D 获取中...</p> -->
                             <!-- 新 API 方法， 十分简洁 -->
                            <!-- <script src="https://v1.hitokoto.cn/?encode=js&select=%23hitokoto" defer></script> -->
+                            </style>
+							<p><strong>在线看快手/抖音小姐姐视频</strong></p>
+							<p><strong><span style="color:#b700ff;">播放失败或长时间加载请播放下一个</strong></span>
+						</p>
+<style>
+#switch,#next1{
+background: #7F9CCC;
+color:#fff;
+line-height:40px;
+text-align:center;
+width:100px;
+border:none;
+margin:0 6px;
+border-radius:6px;
+font-weight:bold;
+}
+</style>
+</head>
+<body>
+<section id="main">
+<video id="player" src="http://www.kuaidoushe.com/video.php" controls="controls" width="100%" height="500px"></video>
+</section>
+<div style="text-align: center;">
+<section id="buttons">
+<button id="switch">连续: 开</button><button id="next1">换一个</button>
+</section>
+</div>
+
+
+ 
+<script>
+(function (window, document) {
+if (top != self) {
+window.top.location.replace(self.location.href);
+}
+var get = function (id) {
+return document.getElementById(id);
+}
+var bind = function (element, event, callback) {
+return element.addEventListener(event, callback);
+}
+var auto = true;
+var player = get('player');
+var randomm = function () {
+player.src = 'http://v.nrzj.vip/video.php?_t=' + Math.random();
+player.play();
+}
+bind(get('next1'), 'click', randomm);
+bind(player, 'error', function () {
+randomm();
+});
+bind(get('switch'), 'click', function () {
+auto = !auto;
+this.innerText = '连续: ' + (auto ? '开' : '关');
+});
+bind(player, 'ended', function () {
+if (auto) randomm();
+});
+})(window, document);</script>
+<script>var _hmt = _hmt || [];(function() {var hm = document.createElement("script");hm.src = "";var s = document.getElementsByTagName("script")[0]; s.parentNode.insertBefore(hm, s);})();</script>
                         </div>
                     </div>
 
