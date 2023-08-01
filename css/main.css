@@ -20,14 +20,8 @@ body {
 	width: 150px;
 }
 
-ul {
-	display: flex;
-	justify-content: center;
-	padding-left: 0;
-}
-
 li {
-	/* float: left; */
+	float: left;
 	list-style-type: none;
 	padding: 15px;
 	margin-top: 20px;
@@ -1360,4 +1354,9 @@ a {
 	100% {
 		opacity: 0;
 	}
+}
+
+#img {
+	padding-inline-start: 0px;
+	display: inline-block;
 }
