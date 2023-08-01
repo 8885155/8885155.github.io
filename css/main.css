@@ -2,16 +2,17 @@
 
 @import url("https://fonts.googleapis.com/css?family=Fredoka+One|Open+Sans:300");
 
-html,body {
+html,
+body {
 	margin: 0;
 	padding: 0;
 	height: 100%;
 	width: 100%;
-	font-family: PingFang SC,RobotoDraft,Roboto,Helvetica Neue,Helvetica,Arial,STHeiti,华文黑体,Microsoft YaHei,微软雅黑,sans-serif;
+	font-family: PingFang SC, RobotoDraft, Roboto, Helvetica Neue, Helvetica, Arial, STHeiti, 华文黑体, Microsoft YaHei, 微软雅黑, sans-serif;
 	color: #333333;
-	background: rgba(249, 249, 249, 0.66);
-	overflow-x:hidden; 
-	overflow-y:hidden;
+	background: linear-gradient(to bottom, #99ccff, #ccffff);
+	overflow-x: hidden;
+	overflow-y: hidden;
 }
 
 .avatar {
@@ -19,15 +20,21 @@ html,body {
 	width: 150px;
 }
 
+ul {
+	display: flex;
+	justify-content: center;
+	padding-left: 0;
+}
+
 li {
-	float: left;
+	/* float: left; */
 	list-style-type: none;
 	padding: 15px;
 	margin-top: 20px;
 }
 
 ::selection {
-	background: rgba(0,149,255,.1);
+	background: rgba(0, 149, 255, .1);
 	color: #6F8EC5;
 }
 
@@ -47,26 +54,26 @@ a {
 }
 
 .bio {
-	color: rgba(51,51,51,0.54);
+	color: rgba(51, 51, 51, 0.54);
 	margin-top: 8px;
 	display: flex;
 	justify-content: center;
 	align-items: center;
 }
 
-.bio > span {
+.bio>span {
 	font-weight: 300;
 	letter-spacing: 1.4px;
 	opacity: 0;
 	transition: all 1s .5s;
 }
 
-.bio > span.emphasis {
+.bio>span.emphasis {
 	font-size: 20px;
 	letter-spacing: 2px;
 }
 
-.bio.ready > span {
+.bio.ready>span {
 	opacity: 1;
 }
 
