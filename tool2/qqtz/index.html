@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  <title>QQ跳转页面 - QQ强制聊天</title>
+  <link rel="stylesheet" href="https://cdn.bootcdn.net/ajax/libs/bootstrap/5.0.2/css/bootstrap.min.css">
+</head>
+
+<body>
+  <div id="app" class="container mt-3">
+    <!-- card -->
+    <div class="card p-4">
+      <!-- card header -->
+      <div class="card-header text-center bg-light">
+        <h2 class="text-dark">QQ强制聊天</h2>
+      </div>
+
+      <!-- card body -->
+      <form class="card-body">
+        <div class="mb-3 input-group-lg">
+          <label for="input-qq" class="form-label">QQ号码</label>
+          <input type="text" id="input-qq" name="uin" class="form-control" placeholder="请输入要跳转的QQ号码" required>
+        </div>
+        <div class="row pt-2 pb-2">
+          <div class="col-12 col-md-4">
+            <button type="button" onclick="jumpToChat()" class="btn btn-primary btn-lg w-100">跳转聊天界面</button><br/><br/>
+          </div>
+          <div class="col-12 col-md-4">
+            <button type="button" onclick="jumpToAddFriend()" class="btn btn-primary btn-lg w-100">跳转加好友界面</button><br/><br/>
+          </div>
+          <div class="col-12 col-md-4">
+            <button type="button" onclick="jumpToWPA()" class="btn btn-primary btn-lg w-100">WPA临时会话</button>
+          </div>
+        </div>
+      </form>
+
+      <!-- card footer -->
+      <div class="card-footer bg-white text-center">
+        <p class="text-muted">跳转聊天界面：一般只支持已开启临时会话的QQ</p>
+        <p class="text-muted">跳转加好友界面：可解决QQ设置不允许被搜索后无法加好友的问题</p>
+        <p class="text-muted">WPA临时会话：从网页跳转聊天界面，与第一个按钮功能差不多</p>
+        
+      </div>
+    </div>
+
+  </div>
+
+  <!-- JavaScript代码 -->
+  <script src="https://cdn.bootcdn.net/ajax/libs/bootstrap/5.0.2/js/bootstrap.min.js"></script>
+  <script>
+    function jumpToChat() {
+      var qq = document.getElementById("input-qq").value;
+      var url = "mqqwpa://im/chat?chat_type=wpa&version=1&src_type=web&web_src=oicqzone.com&uin=" + qq;
+      window.location.href = url;
+    }
+
+    function jumpToAddFriend() {
+      var qq = document.getElementById("input-qq").value;
+      var url = "mqq://card/show_pslcard?src_type=internal&version=1&uin=" + qq + "&card_type=person&source=sharecard";
+      window.location.href = url;
+    }
+
+    function jumpToWPA() {
+      var qq = document.getElementById("input-qq").value;
+      var url = "https://wpa.qq.com/msgrd?v=3&site=qq&menu=yes&uin=" + qq;
+      window.open(url, '_blank');
+    }
+  </script>
+</body>
+<script charset="UTF-8" id="LA_COLLECT" src="//sdk.51.la/js-sdk-pro.min.js"></script>
+<script>LA.init({id:"JnttpH76eHl4wB82",ck:"JnttpH76eHl4wB82"})</script>
+</html>
