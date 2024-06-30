@@ -3,7 +3,7 @@ document.addEventListener('DOMContentLoaded', () => {
     let queryData = { cid: -999, start: -999, count: 48 };
     let total = -999;
     $.ajax({
-        url: "/tool/bz/api.php",
+        url: "https://m.lpv4.cn:189//api/zapi.php",
         type: 'GET',
         dataType: 'json',
         data: { a: 'type' },
@@ -27,7 +27,7 @@ document.addEventListener('DOMContentLoaded', () => {
         $('.joe_wallpaper__list').html('');
         isLoading = true;
         $.ajax({
-            url: "/tool/bz/api.php",
+            url: "https://m.lpv4.cn:189//api/zapi.php",
             type: 'GET',
             dataType: 'json',
             data: {
