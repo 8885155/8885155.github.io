@@ -1,0 +1,207 @@
+      /* 样式表 */
+  body {
+    /* 设置body的margin为0，以消除默认的边距 */
+    margin: 0;
+    padding: 0;
+    text-align: center;
+    background-size: cover ;
+    font-family: '楷体';
+    height: 100vh; /* 设置body高度为视窗高度的100% */
+    justify-content: center; /* 水平居中 */
+    align-items: center; /* 垂直居中 */
+    }
+    
+    /* 设置div的宽度和高度为视窗的100% */
+    #adaptive-box {
+    width: 100vw; /* 视窗宽度的100% */
+    height: 100vh; /* 视窗高度的100% */
+}
+    
+    a {text-decoration: none; } /*链接没有文本装饰*/
+    a:link {color: block;} /* 未被访问的链接 */
+  
+    #foot {
+    width: 100%; /* 这将树立一个攻下 100% 涉猎器宽度的容器 */
+    margin: 0 auto; /* 被动边距（与宽度一路）会将页面居中 */
+    text-align:  center; /* 这将覆盖 body 元素上的“text-align: center”。 */
+    font-size:calc(100vw * 30 / 960);
+    
+    }
+
+    .div1{
+    display: inline-block;
+    cursor: pointer;   /* 光标指向手型 */
+        }
+
+    
+#foot2{
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    z-index: 1000;
+    background: #ffffff;
+}
+
+#foot1 {
+    width: 100%; /* 这将树立一个攻下 100% 涉猎器宽度的容器 */
+    margin: 0 auto; /* 被动边距（与宽度一路）会将页面居中 */
+    text-align:  center; /* 这将覆盖 body 元素上的“text-align: center”。 */
+}
+
+.div1{
+display: inline-block;
+
+}
+
+  .dh {
+	display: inline-block;
+    cursor: pointer;   /* 光标指向手型 */
+    transition: all 0.3s ease; /* 添加动画效果 */
+    color: black;
+   }
+        
+  .dh:hover {
+    transform: scale(1.2); /* 当鼠标悬浮时放大按钮 */
+    color: red;
+  }
+
+  .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    transition: all 0.3s ease;
+  }
+  .menu {
+    width: 140px;
+    height:460px;
+    background-color: #f0f0f0;
+    opacity: 0.9;
+    padding: 10px;
+    position: fixed;
+    margin-left: 5px;
+    top: 20px;
+    transition: left 0.3s ease;
+    border-radius:20px; /* 将按钮变成圆形 */
+  }
+  .menu ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.menu li {
+	list-style: none;
+    cursor: pointer;
+    padding: 10px;
+    border-bottom: 4px solid #ddd;
+    border-radius: 20px; /* 将按钮变成圆形 */
+}
+
+.menu li.active {
+    background-color: #4CAF50; /* 选中菜单项的颜色 */
+    color: white;}
+    
+  .menu-item {
+    padding: 10px;
+    margin-bottom: 5px;
+    border: 1px solid transparent;
+    transition: background-color 0.3s ease;
+
+            border-radius: 20%; /* 将按钮变成圆形 */
+            font-family: '楷体';/* 字体 */
+            text-align: center; /* 居中显示文本 */
+            line-height: 20px;  /* 文字行高 */
+            cursor: pointer;   /* 光标指向手型 */
+            transition: all 0.3s ease; /* 添加动画效果 */
+}
+        
+        .menu-item:hover {
+            transform: scale(1.2); /* 当鼠标悬浮时放大按钮 */
+            color: red;
+        }
+
+  .menu-item.active {
+    background-color: #e9ecef;
+    border-color: #e9ecef;
+  }
+  .content {
+    flex-grow: 1;
+    padding: 0px;
+    margin: 0px;
+  }
+  .content-section {
+    display: none;
+    padding: 0px;
+    margin: 0px;
+  }
+  .content-section.active {
+    display: block;
+  }
+
+  #toggleButton {
+    		position: fixed;
+    		z-index: 9999;	/* 置于顶层,数值越大越置前 */
+   			position: fixed; /* 设置为fixed使其保持在页面上 */
+   			bottom: 28%;   /* 距离页面底部的位置 */
+    		left: 165px;    /* 距离页面左侧的位置 */
+    		width: 45px;     /* 按钮的宽度 */
+         height: 45px;    /* 按钮的高度 */
+
+            background-color: rgba(0,0,0,0); /* 按钮的背景色 */
+            border: 0px solid rgba(0,0,0,0);/*边框描边和颜色*/
+            border-radius: 20%; /* 将按钮变成圆形 */
+            font-family: '楷体';/* 字体 */
+            text-align: center; /* 居中显示文本 */
+            line-height: 20px;  /* 文字行高 */
+            cursor: pointer;   /* 光标指向手型 */
+            transition: all 0.3s ease; /* 添加动画效果 */
+}
+        
+        #toggleButton:hover {
+            transform: scale(1.3); /* 当鼠标悬浮时放大按钮 */
+        }
+
+
+        .text3 {
+    background-size: cover ;
+    display: inline-block;
+    width: 150px;
+    height: 40px;
+    border-radius:5px;
+    box-shadow: 1px 1px 2px 1px #eee;
+    margin:5px;
+    text-align: center; 
+    font-weight: bolder;
+    font-size:14px;
+    color:red;
+    outline: none;
+}
+
+  /* 设置图片的默认透明度 */
+  .img-transparent {
+    opacity: 0.9;
+    transition: opacity 0.3s ease; /* 添加过渡效果 */
+    cursor: pointer; /* 添加点击手型图标 */
+  }
+
+  /* 设置图片被点击时的透明度 */
+  .img-transparent.active {
+    opacity: 0.5;
+  }
+  
+    /* 设置按钮的初始样式 */
+  .btn {
+        		position: fixed;
+            z-index: 9999;	/* 置于顶层,数值越大越置前 */
+            position: fixed; /* 设置为fixed使其保持在页面上 */
+            bottom: 20%;   /* 距离页面底部的位置 */
+            transition: all 0s ease; /* 添加动画效果 */
+
+    cursor: pointer; /* 添加点击手型图标 */
+  }
+
+  /* 设置按钮被点击后的样式 */
+  .btn.small {
+    transform: translateX(-195px); /* 左移 */
+  }
