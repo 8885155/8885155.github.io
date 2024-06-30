@@ -18,6 +18,7 @@ $(function(){
         {name:'影视',url:'https://www.bei5dy.com/',icon:'./img/h.webp'},
         {name:'直播',url:'./tool/ds',icon:'./img/l.webp'},
         {name:'音乐',url:'https://tools.liumingye.cn/music/?page=searchPage#/recent',icon:'https://picabstract-preview-ftn.weiyun.com/ftn_pic_abs_v3/a89916f469fd6d47b88662c73f94fec26a624d62ef514c8790a392906b2b3875f78629d6a6a6e50bff239b64ac8dbd14?pictype=scale&from=30111&version=3.3.3.3&fname=u%3D3242640730%2C2816196037%26fm%3D253%26fmt%3Dauto%26app%3D138%26f%3DJPEG.webp&size=1024'},
+        {name:'毒日记',url:'http://20.re/h5.html#/',icon:'http://20.re/favicon.ico'},
 
     ]
     for(var i in tools){
