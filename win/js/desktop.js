@@ -1,7 +1,7 @@
 $(function(){
     var tools=[
         {name:'此电脑',url:'http://sj.ysupan.com/8885155#/',icon:'./img/imageres_2.ico'},
-        {name:'浏览器',url:'./bing.html/',icon:'./img/k.webp'},
+        {name:'浏览器',url:'./bing.html',icon:'./img/k.webp'},
        {name:'流量卡网厅①',url:'https://haokawx.lot-ml.com/Product/Index/551526',icon:'./img/a.webp'},
         {name:'流量卡网厅②',url:'https://hk.yunhaoka.cn/#/pages/micro_store/index?agent_id=6cb2c0fb7667ef94b967e505d8255dd7',icon:'./img/b.webp'},
         {name:'流量卡网厅③',url:'https://wap.kaboshihaoka.com/show/?agent_id=69398',icon:'./img/c.webp'},
