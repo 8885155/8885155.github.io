@@ -13,7 +13,7 @@ $(function(){
         {name:'工具箱',url:'https://tool.browser.qq.com/',icon:'https://m4.publicimg.browser.qq.com/publicimg/nav/qbtool/qbtool-latest.png'},
         {name:'文心一言',url:'https://yiyan.baidu.com/',icon:'./img/wxyy.jpg'},
         {name:'流量消耗',url:'./tool/ll',icon:'./img/llk.png'},
-        {name:'必应图库',url:'//cn.bing.com/images/search?q=%E7%BE%8E%E5%A5%B3%E8%AF%B1%E6%83%91%E9%AB%98%E6%B8%85&go=%E6%90%9C%E7%B4%A2&qs=ds&form=QBIR&first=1',icon:'./img/Bing1.svg/'},
+        {name:'必应图库',url:'//cn.bing.com/images/search?q=%E7%BE%8E%E5%A5%B3%E8%AF%B1%E6%83%91%E9%AB%98%E6%B8%85&go=%E6%90%9C%E7%B4%A2&qs=ds&form=QBIR&first=1',icon:'./img/Bing1.svg'},
         {name:'随机视频',url:'https://api.lolimi.cn/dy/',icon:'https://picabstract-preview-ftn.weiyun.com/ftn_pic_abs_v3/2c1c8fb9ec2320d8efe53ac2cb48279b3396ac163254d2ccbf2dcc8c578c70df1d91c4131bb773990f7a2c88776ebdb7?pictype=scale&from=30111&version=3.3.3.3&fname=icon_1711384802009.jpeg&size=1024'},
         {name:'游戏',url:'https://xingye.me/game/index.php',icon:'./img/g.webp'},
         {name:'影视',url:'https://www.bei5dy.com/',icon:'./img/h.webp'},
