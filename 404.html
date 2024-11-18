@@ -1,0 +1,329 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    	<link rel="icon" href="./static/img/favicon.ico">
+	<meta name="description" content="一个陌生人的个人引导主页，用来做笔记，另外对生活的一些体悟，记录生活的点点滴滴。">
+	<meta name="keywords" content="个人主页,平凡主页,个人引导页">
+    <title>平凡の主页</title>
+    <style>
+        :root {
+            --background-color: #c0c0c0;
+            --window-background: #ffffff;
+            --border-light: #dfdfdf;
+            --border-dark: #808080;
+            --text-color: #000000;
+            --title-bar-color: #000080;
+            --title-text-color: #ffffff;
+            --button-face: #c0c0c0;
+        }
+        body {
+            font-family: 'MS Sans Serif', 'Microsoft Sans Serif', sans-serif;
+            line-height: 1.4;
+            color: var(--text-color);
+            background-color: var(--background-color);
+            
+            justify-content: center;
+            align-items: center;
+            
+            margin: 0;
+            padding: 0;
+            font-size: 12px;
+        }
+        .window {
+            background-color: var(--window-background);
+            border: 2px solid;
+            border-color: var(--border-light) var(--border-dark) var(--border-dark) var(--border-light);
+            box-shadow: 2px 2px 0 rgba(0, 0, 0, 0.1);
+            width: 100%;
+        }
+        .title-bar {
+            background-color: var(--title-bar-color);
+            color: var(--title-text-color);
+            padding: 2px 3px;
+            font-weight: bold;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        .title-bar-text {
+            margin-right: auto;
+        }
+        .title-bar-controls button {
+            width: 16px;
+            height: 14px;
+            border: 1px solid var(--border-dark);
+            background-color: var(--button-face);
+            margin-left: 2px;
+            font-size: 9px;
+            line-height: 1;
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            vertical-align: top;
+        }
+        .window-body {
+            padding: 10px;
+        }
+        .menu-bar {
+            background-color: var(--button-face);
+            border-bottom: 1px solid var(--border-dark);
+            padding: 1px;
+        }
+        .menu-bar button {
+            background-color: var(--button-face);
+            border: 1px solid transparent;
+            padding: 2px 6px;
+            margin-right: 4px;
+        }
+        .menu-bar button:hover {
+            border-color: var(--border-light) var(--border-dark) var(--border-dark) var(--border-light);
+        }
+        .category {
+            margin-bottom: 15px;
+            border: 1px solid var(--border-dark);
+            padding: 5px;
+        }
+        h2 {
+            margin-top: 0;
+            margin-bottom: 10px;
+            font-size: 14px;
+            font-weight: bold;
+        }
+        .links {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(120px, 1fr));
+            gap: 5px;
+        }
+        .link {
+            text-decoration: none;
+            color: var(--text-color);
+            background-color: var(--button-face);
+            border: 1px solid;
+            border-color: var(--border-light) var(--border-dark) var(--border-dark) var(--border-light);
+            padding: 4px;
+            text-align: center;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            min-height: 30px;
+        }
+        .link:hover {
+            background-color: var(--border-light);
+        }
+        .link:active {
+            border-color: var(--border-dark) var(--border-light) var(--border-light) var(--border-dark);
+        }
+        @media (max-width: 600px) {
+            .links {
+                grid-template-columns: 1fr 1fr;
+            }
+        }
+
+        /*弹窗*/
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 1;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(0,0,0,0.4);
+  }
+ .modal-content {
+    background-color: #fefefe;
+    margin: 15% auto;
+    padding: 20px;
+    border: 1px solid #888;
+    width: 300px;
+    border-radius: 5px;
+  }
+  
+  
+  .modal-content img {
+    width: 260px;
+    height: 260px;
+    border-radius: 8px;
+  }
+
+.zz2{
+   text-align: center;
+  }
+
+   .circles {
+    display: flex;
+    justify-content: center;
+    margin: 0px 0;
+
+    background-color: var(--button-face);
+    border-bottom: 1px solid var(--border-dark);
+    padding: 1px;
+  }
+  .circles div {
+    width: 40px;
+    height: 80px;
+    border-radius: 50%;
+    background-color: #ccc0;
+    margin: 0 0px;
+    
+    
+    background-color: var(--button-face);
+    border: 1px solid transparent;
+    padding: 2px 6px;
+    margin-right: 4px;
+  }
+  
+  
+  .circles button {
+            background-color: var(--button-face);
+            border: 1px solid transparent;
+            padding: 2px 6px;
+            margin-right: 4px;
+        }
+.circles button:hover {
+            border-color: var(--border-light) var(--border-dark) var(--border-dark) var(--border-light);
+        }
+  
+  
+  
+ .circles div:nth-child(1) {
+    top: -40px;
+    left: 50%;
+    transform: translateX(-50%);
+  }
+  .circles div:nth-child(2) {
+    top: -40px;
+    right: 0;
+  }
+  .circles div:nth-child(3) {
+    top: -40px;
+    left: 0;
+  }
+  .circles div:nth-child(4) {
+    top: -40px;
+    right: 50%;
+    transform: translateX(50%);
+  }
+
+    </style>
+</head>
+<body>
+<p><center><img src="https://q1.qlogo.cn/g?b=qq&nk=8885155&s=640" alt="logo"  style="width: 80px;height: 80px;border-radius: 50%;"><p><span style="background: #CC3333;border-radius: 10px;">平凡秀</span></center>
+                
+            </div>
+    <div class="menu-bar">
+ <!-- 弹窗1 -->
+<center><button onclick="openModal(1)">微信(W)</button>
+<!-- 弹窗2 -->
+<button onclick="openModal(2)">QQ(Q)</button>
+<!-- 弹窗3 --> 
+<button onclick="openModal(3)">查看(V)</button>
+<!-- 弹窗4 -->
+<button onclick="openModal(4)">帮助(H)</button></center>
+        </div>
+<!-- 弹窗内容 -->
+<div id="myModal1" class="modal">
+  <div class="modal-content">
+    <span class="close">&times;</span>
+ 
+  <p>V❤️号：未公布</p>
+</div>
+  </div>
+</div>
+<div id="myModal2" class="modal">
+  <div class="modal-content">
+    <span class="close">&times;</span>
+    
+  <p>QQ：8885155</p>
+</div>
+  </div>
+</div>
+<div id="myModal3" class="modal">
+  <div class="modal-content">
+    <span class="close">&times;</span>
+    </p>
+    <p><img src="https://q1.qlogo.cn/g?b=qq&nk=8885155&s=640" alt="logo"  style="width: 60px;height: 60px;border-radius: 50%;"></p>
+我是<span style="background: #CC3333;border-radius: 10px;">平凡秀</span>
+<p>男 丨 00后 丨 双子座</p>
+ <p>来自西南地区一个比较偏远的小村庄</p>
+ <p>喜欢玩玩游戏 看小说 看动漫 看电影 等等</p>
+  </div>
+</div>
+<div id="myModal4" class="modal">
+  <div class="modal-content">
+    <span class="close">&times;</span>
+    <p>我什么都帮不了你，只能告诉你<span style="background: #CC3333;border-radius: 10px;font-size: 16px;">‘人丑就要多读书’</span>。</p>
+  </div>
+
+ </div>
+ 
+            
+
+            
+            <div class="window-body">
+                                <div class="category">
+                    <h2>我的项目</h2>
+                    <div class="links">
+                                                <a href="http://hzyo.cn" class="link" target="_blank" rel="noopener noreferrer">画中游</a>
+                                                <a href="http://tool.hzyo.cn" class="link" target="_blank" rel="noopener noreferrer">工具箱</a>
+                                                <a href="/" class="link" target="_blank" rel="noopener noreferrer">待添加…</a>
+                                                <a href="/" class="link" target="_blank" rel="noopener noreferrer">待添加…</a>
+                                            </div>
+                </div>
+                                <div class="category">
+                    <h2>常用工具</h2>
+                    <div class="links">
+                                                <a href="/" class="link" target="_blank" rel="noopener noreferrer">待添加…</a>
+                                                <a href="/" class="link" target="_blank" rel="noopener noreferrer">待添加…</a>
+                                                <a href="/" class="link" target="_blank" rel="noopener noreferrer">待添加…</a>
+                                                <a href="/" class="link" target="_blank" rel="noopener noreferrer">待添加…</a>
+                                                <a href="/" class="link" target="_blank" rel="noopener noreferrer">待添加…</a>
+                                                <a href="/" class="link" target="_blank" rel="noopener noreferrer">待添加…</a>
+                                                <a href="/" class="link" target="_blank" rel="noopener noreferrer">待添加…</a>
+                                            </div>
+                </div>
+                            </div>
+        </div>
+    </div>
+    
+    
+    
+    
+    
+    
+     <script>
+// Function to open modal
+function openModal(modalNumber) {
+  var modal = document.getElementById("myModal" + modalNumber);
+  modal.style.display = "block";
+}
+
+// Get the modal elements
+var modals = document.querySelectorAll('.modal');
+
+// Get the <span> elements that close the modal
+var spans = document.querySelectorAll(".close");
+
+// When the user clicks on <span> (x), close the modal
+spans.forEach(function(span) {
+  span.onclick = function() {
+    var modalId = this.parentElement.parentElement.id;
+    document.getElementById(modalId).style.display = "none";
+  }
+});
+
+// When the user clicks anywhere outside of the modal, close it
+window.onclick = function(event) {
+  if (event.target.classList.contains('modal')) {
+    modals.forEach(function(modal) {
+      modal.style.display = "none";
+    });
+  }
+}
+</script>
+
+</body>
+</html>
