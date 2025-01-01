@@ -27,8 +27,8 @@
                         "title": "影视搜索"
                     }
                     ,{
-                        "site": "https://hzyo.cn/llk ",
-                        "img": "https://win.hzyo.cn/img/llkk.png",
+                        "site": "./llk ",
+                        "img": "./style/img/llkk.png",
                         "title": "大流量卡"
                     },
                     {
