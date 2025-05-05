@@ -27,12 +27,12 @@
                         "title": "影视搜索"
                     }
                     ,{
-                        "site": "./llk ",
+                        "site": "http://blog.hzyo.cn/llk/",
                         "img": "./style/img/llkk.png",
                         "title": "大流量卡"
                     },
                     {
-                        "site": "https://blog.hzyo.cn/ ",
+                        "site": "https://blog.hzyo.cn/?1",
                         "img": "https://blog.hzyo.cn/favicon.ico",
                         "title": "平凡博客"
                     },
